@@ -1,1 +1,1 @@
-src of fairs.cf
+src of https://fairs.cf
