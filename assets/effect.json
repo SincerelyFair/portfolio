@@ -1,4 +1,4 @@
-$.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=a1ebbf04c6164dd98b527e26c57fc28c", function (data) {
+$.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=1b7c7cacd6bb46c19ad9562b87749ac4", function (data) {
         const ip = data.ip_address;
         const city = data.city;
         const region = data.region;
