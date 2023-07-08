@@ -40,13 +40,42 @@
 
 </pre>
 <div>
-<audio id="audio" muted="" paused="" style="display:none;" controls="" loop="">
-<source src="assets/audio.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-<video loop="" muted="muted" id="bgvid">
-<source src="assets/audio.mp4" type="video/mp4">
-</video>
+  <audio id="audio" muted="" paused="" style="display:none;" controls="" loop="">
+    <source id="audioSource" src="" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <video loop="" muted="muted" id="bgvid">
+    <source src="assets/audio.mp4" type="video/mp4">
+  </video>
+</div>
+
+<script>
+  // bangers here
+  var audioFiles = [
+    "assets/audio.mp3",
+    "assets/audio1.mp3",
+    "assets/audio2.mp3",
+    "assets/audio3.mp3",
+    "assets/audio4.mp3",
+    "assets/audio5.mp3",
+    "assets/audio6.mp3",
+    "assets/audio7.mp3"
+  ];
+
+  function getRandomAudio() {
+    var randomIndex = Math.floor(Math.random() * audioFiles.length);
+    return audioFiles[randomIndex];
+  }
+
+  window.addEventListener('load', function() {
+    var audioSource = document.getElementById('audioSource');
+    audioSource.src = getRandomAudio();
+
+    var audioPlayer = document.getElementById('audio');
+    audioPlayer.load();
+    audioPlayer.play();
+  });
+</script>
 <script src="scripts/core.js"></script>
 <script src="scripts/jquery.min.js"></script>
 <script src="scripts/disable_inspect.js"></script>
